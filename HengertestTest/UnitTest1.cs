@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Henger;
 
 namespace HengertestTest
 {
@@ -6,8 +7,9 @@ namespace HengertestTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void setSugarTest()
         {
+            BarrelTest bt1 = new 
         }
     }
 }
