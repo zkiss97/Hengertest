@@ -1,8 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System;
 
 namespace Henger
 {
-    class BarrelRoll
+    class Barrel
     {
         private double radius;
         private double height;
@@ -13,7 +19,7 @@ namespace Henger
         private double barrelSurface;
         private double barrelCapacity;
 
-        public BarrelRoll()
+        public Barrel()
         {
             this.radius = 0;
             this.height = 0;
@@ -34,7 +40,7 @@ namespace Henger
         public void getKerulet()
         {
             Console.WriteLine("\nMivel a feladat szerzője a leíráskor részeg volt, \na függvény külön kiszámolja az alap kör kerületét, és a palást téglalap kerületét.");
-            
+
             circlePerimeter = 2 * radius * PI;
             rectanglePerimeter = (circlePerimeter + height) * 2;
             Console.WriteLine("\nAlap kör kerülete: {0}\nA palást kerülete: {1}", circlePerimeter, rectanglePerimeter);
@@ -42,7 +48,7 @@ namespace Henger
 
         public void getTerulet()
         {
-            circleSurface = radius * radius / PI;
+            circleSurface = radius * radius * PI;
             Console.WriteLine("\nAz alap kör területe: {0}", circleSurface);
         }
 
@@ -62,13 +68,15 @@ namespace Henger
     {
         static void Main(string[] args)
         {
-            BarrelRoll b1 = new BarrelRoll();
+            Barrel b1 = new Barrel();
             b1.setSugar();
             b1.setMagas();
             b1.getKerulet();
             b1.getTerulet();
             b1.getFelszin();
             b1.getTerfogat();
+
+            Console.ReadLine();
         }
     }
 }

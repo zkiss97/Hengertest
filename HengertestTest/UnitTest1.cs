@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Henger;
+//using Barrel;
 
 namespace HengertestTest
 {
@@ -7,9 +7,22 @@ namespace HengertestTest
     public class UnitTest1
     {
         [TestMethod]
-        public void setSugarTest()
+        public double getKeruletTest(double radius, double PI)
         {
-            BarrelTest bt1 = new 
+            return 2 * radius * PI;
         }
+
+        public double getTeruletTest(double radius, double PI)
+        {
+            return radius * radius * PI;
+        }
+
+        public double getFelszinTest(double circleSurface, double circlePerimeter, double height)
+        {
+            return circleSurface * 2 + circlePerimeter * height;
+        }
+
+
+
     }
 }
